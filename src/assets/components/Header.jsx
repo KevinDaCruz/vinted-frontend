@@ -3,7 +3,7 @@ import logo from "../img/logo.png";
 const Header = () => {
   return (
     <header className="container">
-      <div>
+      <div className="header">
         <img className="logo" src={logo} alt="logo" />
         <input type="text" placeholder="Recherche des articles" />
         <button>S'inscire</button>
