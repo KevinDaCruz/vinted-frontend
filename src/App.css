@@ -1,10 +1,24 @@
 .logo {
   height: 40px;
+  cursor: pointer;
 }
 
 .container {
   margin: 0 auto;
   width: 1280px;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+button {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .main-img {
@@ -14,13 +28,192 @@
 }
 
 .header {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  height: 75px;
-  align-items: center;
+  margin: auto;
+  padding: 10px 0;
+  width: 1280px;
+}
+
+.header input {
+  background-color: #f5f6f7;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  height: 37px;
+  padding-left: 40px;
+  width: 590px;
+}
+
+.header button {
+  border: 1px solid #2cb1ba;
+  border-radius: 5px;
+  font-size: 12px;
+  height: 30px;
+  width: 115px;
+}
+
+.sign-up {
+  margin-right: 20px;
+}
+
+.sign-up,
+.login {
+  background-color: #fff;
+  color: #2cb1ba;
+}
+
+.sold {
+  background-color: #2cb1ba;
+  color: #fff;
 }
 
 .home {
-  border: 2px solid red;
-  height: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.home-pictures {
+  height: 360px;
+  object-fit: cover;
+  width: 235px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  height: 25px;
+  margin-right: 10px;
+  object-fit: cover;
+  width: 25px;
+}
+
+.home-offer-info {
+  padding: 8px;
+}
+
+.home-offer-info p {
+  font-size: 14px;
+}
+
+.home-span {
+  color: #999;
+  font-size: 12px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------route offer--------- */
+
+.main-offer {
+  background-color: #ebedee;
+  height: calc(100vh - 60px);
+}
+
+.offer-container {
+  display: flex;
+  gap: 30px;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 30px;
+  width: 1280px;
+}
+
+.offer-picture {
+  height: 600px;
+  object-fit: cover;
+}
+
+.offer-info {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  width: 320px;
+}
+
+.offer-price {
+  color: #111;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/* --------page signup--------- */
+
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 275px;
+  margin-top: 30px;
+}
+
+.input-text {
+  border: none;
+  border-bottom: 1px solid #fcced3;
+  height: 35px;
+  margin-bottom: 20px;
+}
+
+.check-box-glob {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.check-box {
+  display: flex;
+  align-items: center;
+}
+
+.check-box input {
+  margin-right: 20px;
+}
+
+.check-box span {
+  color: #666;
+}
+
+.signup-form p {
+  color: #999;
+  font-size: 12px;
+  text-align: left;
+  margin: 12px 0px;
+}
+
+.signup-form button {
+  background-color: #2cb1ba;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  height: 45px;
+  margin-top: 20px;
+  outline: none;
+  width: 100%;
+}
+
+.signup-form a {
+  color: #2cb1ba;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
 }
