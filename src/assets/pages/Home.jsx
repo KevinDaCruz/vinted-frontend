@@ -33,41 +33,36 @@ const Home = () => {
       <div className="container home">
         {data.offers.map((offers) => {
           return (
-            <Link key={offers._id} to={`/offers/${offers._id}`}>
-              <div className="offers">
-                <div
-                  onClick={() => {
-                    console.log("click");
-                  }}
-                  className="user-info"
-                >
-                  <img
-                    className="profile-pic"
-                    src={offers.owner.account.avatar?.url}
-                    alt="profile-pic"
-                  />
-                  <span className="home-span">
-                    {offers.owner.account.username}
-                  </span>
-                </div>
+            <div key={offers._id} className="offers">
+              <div className="user-info">
+                <img
+                  className="profile-pic"
+                  src={offers.owner.account.avatar?.url}
+                  alt="profile-pic"
+                />
+                <span className="home-span">
+                  {offers.owner.account.username}
+                </span>
+              </div>
+              <Link to={`/offers/${offers._id}`}>
                 <img
                   className="home-pictures"
                   src={offers.product_image.url}
                   alt=""
                 />
-                <div className="home-offer-info">
-                  <p>{offers.product_price} €</p>
-                  <div className="details">
-                    <span className="home-span">
-                      {offers.product_details[1].TAILLE}
-                    </span>
-                    <span className="home-span">
-                      {offers.product_details[0].MARQUE}
-                    </span>
-                  </div>
+              </Link>
+              <div className="home-offer-info">
+                <p>{offers.product_price} €</p>
+                <div className="details">
+                  <span className="home-span">
+                    {offers.product_details[1].TAILLE}
+                  </span>
+                  <span className="home-span">
+                    {offers.product_details[0].MARQUE}
+                  </span>
                 </div>
               </div>
-            </Link>
+            </div>
           );
         })}
       </div>
