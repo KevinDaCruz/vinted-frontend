@@ -29,7 +29,7 @@ const Home = () => {
     <span>En cours de chargement...</span>
   ) : (
     <main>
-      <img className="main-img" src={mainImg} alt="Image principale" />
+      <img className="main-img" src={mainImg} alt="main-img" />
       <div className="container home">
         {data.offers.map((offers) => {
           return (
