@@ -25,6 +25,15 @@ a {
   text-decoration: none;
 }
 
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+
 .main-img {
   width: 100%;
   height: 455px;
@@ -76,13 +85,18 @@ a {
 .home {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin-top: 30px;
 }
 
 .home-pictures {
   height: 360px;
   object-fit: cover;
+  width: 235px;
+}
+
+.offers {
+  cursor: pointer;
+  padding: 0 6px 16px;
   width: 235px;
 }
 
@@ -118,6 +132,33 @@ a {
   flex-direction: column;
 }
 
+.hero {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 2px hsla(0, 0%, 7%, 0.24);
+  display: flex;
+  flex-direction: column;
+  font-size: 34px;
+  height: 220px;
+  justify-content: center;
+  padding: 25px;
+  position: absolute;
+  top: 75px;
+  width: 360px;
+  margin-top: 74px;
+}
+
+.hero button {
+  background-color: #2baeb7;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  height: 45px;
+  margin-top: 32px;
+  padding: 0 14px;
+  width: 187px;
+}
 /* ---------route offer--------- */
 
 .main-offer {
@@ -148,10 +189,71 @@ a {
   width: 320px;
 }
 
+.offer-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.offer-list li {
+  display: flex;
+  padding: 2px 0;
+}
+
 .offer-price {
   color: #111;
   font-size: 24px;
   line-height: 32px;
+}
+
+.divider {
+  background: hsla(0, 0%, 7%, 0.1);
+  display: block;
+  height: 1px;
+  width: 100%;
+}
+
+.offer-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.description {
+  color: #666;
+}
+
+.offer-user-info > img {
+  border-radius: 50%;
+  height: 50px;
+  margin-right: 10px;
+  object-fit: cover;
+  width: 50px;
+}
+
+button {
+  background: #09b1ba;
+  border: 1px solid #09b1ba;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  height: 36px;
+  width: 100%;
+}
+
+.offer-info button {
+  background: #09b1ba;
+  border: 1px solid #09b1ba;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  height: 36px;
+  line-height: 36px;
+  margin-top: 32px;
+  padding: 0 16px;
+  width: 100%;
 }
 
 /* --------page signup--------- */
@@ -227,4 +329,15 @@ h2 {
   text-align: center;
   padding-top: 25px;
   font-size: 9px;
+}
+
+.log-out {
+  background-color: #c2175b;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  height: 30px;
+  outline: none;
+  border: none;
 }

@@ -29,6 +29,12 @@ const Home = () => {
     <span>En cours de chargement...</span>
   ) : (
     <main>
+      <div className="container home-imgs">
+        <div className="hero">
+          Prêts à faire du tri dans vos placards ?
+          <button>Commencer à vendre</button>
+        </div>
+      </div>
       <img className="main-img" src={mainImg} alt="main-img" />
       <div className="container home">
         {data.offers.map((offers) => {
