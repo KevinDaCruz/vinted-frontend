@@ -1,14 +1,22 @@
 import logo from "../img/logo.png";
 import { Link } from "react-router-dom";
 
-const Header = ({ token, handleToken }) => {
+const Header = ({ token, search, handleToken, setSearch }) => {
   return (
     <header className="container">
       <div className="header">
         <Link to="/">
           <img className="logo" src={logo} alt="logo" />
         </Link>
-        <input type="text" placeholder="Recherche des articles" />
+        <input
+          type="text"
+          placeholder="Recherche des articles"
+          name="search"
+          value={search}
+          onChange={(event) => {
+            setSearch(event.target.value);
+          }}
+        />
         {token ? (
           <button
             className="log-out"
@@ -28,7 +36,9 @@ const Header = ({ token, handleToken }) => {
             </Link>
           </div>
         )}
-        <button className="sold">Vends tes articles</button>
+        <Link to={token ? "/publish" : "/login"}>
+          <button className="sold">Vends tes articles</button>
+        </Link>
       </div>
     </header>
   );

@@ -33,8 +33,8 @@ const Login = ({ handleToken }) => {
     }
   };
   return (
-    <main>
-      <h2>Se connecter</h2>
+    <main className="form-login">
+      <h2 className="title-login">Se connecter</h2>
       <form onSubmit={handleSubmit} className="signup-form">
         <input
           className="input-text"

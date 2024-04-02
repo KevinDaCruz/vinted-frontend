@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Offer = () => {
+const Offer = ({ token }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -22,6 +23,8 @@ const Offer = () => {
     };
     fetchData();
   }, [id]);
+
+  console.log(token);
 
   return isLoading ? (
     <p>Loading...</p>
@@ -60,7 +63,9 @@ const Offer = () => {
               <span>{data.owner.account.username}</span>
             </div>
           </div>
-          <button>Acheter</button>
+          <Link to={token ? "/payment" : "/login"}>
+            <button>Acheter</button>
+          </Link>
         </div>
       </div>
     </main>

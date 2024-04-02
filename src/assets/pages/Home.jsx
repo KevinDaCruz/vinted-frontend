@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import mainImg from "../img/main-img.jpg";
 
-const Home = () => {
+const Home = ({ search, token }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -12,7 +12,7 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://lereacteur-vinted-api.herokuapp.com/offers"
+          `https://lereacteur-vinted-api.herokuapp.com/offers?title=${search}`
         );
 
         // console.log(response.data);
@@ -23,7 +23,7 @@ const Home = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [search]);
 
   return isLoading ? (
     <span>En cours de chargement...</span>
@@ -32,7 +32,9 @@ const Home = () => {
       <div className="container home-imgs">
         <div className="hero">
           Prêts à faire du tri dans vos placards ?
-          <button>Commencer à vendre</button>
+          <Link to={token ? "/publish" : "/login"}>
+            <button>Commencer à vendre</button>
+          </Link>
         </div>
       </div>
       <img className="main-img" src={mainImg} alt="main-img" />

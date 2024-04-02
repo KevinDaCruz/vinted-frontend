@@ -39,8 +39,8 @@ const Signup = ({ handleToken }) => {
   };
 
   return (
-    <main>
-      <h2>S'inscrire</h2>
+    <main className="form-signup">
+      <h2 className="title-signup">S'inscrire</h2>
       <form onSubmit={handleSubmit} className="signup-form">
         <input
           className="input-text"
